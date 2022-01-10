@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body id="body">
+
+    <audio id="audio" controls loop style="display:none"><source src="1.mp3" type="audio/mpeg"></audio>
+    
+
+    <style>
+        body {
+          background-color: white;
+          background-position:top center; background-repeat:no-repeat; background-size:cover;
+        }
+    </style>
+    
+    <script>
+    document.addEventListener('keydown', function(e) {
+    if (e.keyCode == 77) {
+        document.getElementById('audio').play();
+        document.getElementById("body").style.backgroundImage = "url(1.jpg)";
+
+    }
+    });
+
+    </script>
+    
+</body>
+</html>
