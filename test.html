@@ -7,13 +7,25 @@
     <title>test</title>
 </head>
 <body>
-    <p>checkd</p>
+    <p>checkddddd</p>
     
     <iframe src="https://olafwempe.com/mp3/Septium.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
     
     <audio id="player" autoplay loop>
     <source src="https://olafwempe.com/mp3/Septium.mp3" type="audio/mp3">
     </audio>
+    
+    <script>
+        
+        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+  if (!isChrome){
+      $('#iframeAudio').remove()
+  }
+  else {
+      $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
+  }
+        
+    </script>
     
 </body>
 </html>
